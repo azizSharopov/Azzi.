@@ -7,7 +7,7 @@ const {
 
 const memberSchema = new mongoose.Schema(
   {
-    mb_nick: {
+    mb_name: {
       type: String,
       required: true,
       index: { unique: true, sparse: true },
@@ -42,7 +42,8 @@ const memberSchema = new mongoose.Schema(
     },
     mb_address: {
       type: String,
-      required: false,
+      required: true,
+      index: { unique: true, sparse: true },
     },
     mb_description: {
       type: String,
